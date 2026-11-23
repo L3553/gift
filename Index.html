@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المفاجأة قيد التحضير</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: linear-gradient(135deg, #090014, #1b0735, #090014);
+font-family: Tahoma, sans-serif;
+color: white;
+overflow: hidden;
+}
+
+.container {
+text-align: center;
+padding: 30px;
+animation: appear 1.5s ease;
+}
+
+.icon {
+font-size: 65px;
+margin-bottom: 30px;
+animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+font-size: clamp(25px, 6vw, 42px);
+color: #d9b3ff;
+text-shadow: 0 0 20px #a855f7;
+margin-bottom: 20px;
+}
+
+p {
+font-size: 17px;
+color: #c4b5d9;
+letter-spacing: 1px;
+}
+
+.dots::after {
+content: "";
+animation: dots 1.5s infinite;
+}
+
+.line {
+width: 160px;
+height: 3px;
+margin: 35px auto;
+background: linear-gradient(90deg, transparent, #c084fc, transparent);
+animation: glow 2s infinite;
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-15px); }
+}
+
+@keyframes appear {
+from { opacity: 0; transform: translateY(25px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dots {
+0% { content: ""; }
+33% { content: "."; }
+66% { content: ".."; }
+100% { content: "..."; }
+}
+
+@keyframes glow {
+0%, 100% { opacity: 0.4; }
+50% { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>المفاجأة قيد التحضير</h1>
+
+<div class="line"></div>
+
+<p>نعمل على تجهيز شيء مميز<span class="dots"></span></p>
+</div>
+
+</body>
+</html>
